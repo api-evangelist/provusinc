@@ -1,8 +1,33 @@
 aid: provusinc
-name: Provusinc
-description: 'Provusinc is a company surfaced as a portfolio company of norwest-venture-partners and added
-  to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead awaiting
-  the enrichment pipeline.'
+name: Provus
+description: >-
+  Provus (Provusinc) is an agentic AI Configure, Price, Quote (CPQ) platform
+  built specifically for services organizations — professional services,
+  consulting, and asset-based services firms. The platform turns unstructured
+  inputs such as emails, RFPs, and call notes into structured, accurate services
+  quotes, and runs a set of AI agents (Quote Optimizer, Deal Predictor, Proposal
+  Response, Deal Rescue, and Provus Admin) that monitor deals, optimize pricing,
+  assess risk, and protect margin. Provus ships two products — CPQ Express for
+  growing teams and Enterprise Services CPQ for large organizations — with native
+  connectors to Salesforce, HubSpot, Kantata, NetSuite, and DocuSign. It is
+  backed by Norwest Venture Partners and reports managing over $5B in enterprise
+  services revenue across customers including Thoughtworks, Trace3, and Prolifics.
+  Provus does not currently publish a public developer API, OpenAPI specification,
+  or developer portal; integration is delivered through native prebuilt
+  connectors, and product help documentation is hosted on a Document360 knowledge
+  base at docs.provus.ai.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://provus.ai/wp-content/uploads/2021/08/Provus-Blue-Logo.png
 url: https://raw.githubusercontent.com/api-evangelist/provusinc/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +37,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-- Unknown
+- CPQ
+- Configure Price Quote
+- Services Quoting
+- Professional Services
+- Pricing
+- AI Agents
+- Sales
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +56,25 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://provusinc.com
+  url: https://provus.ai
+- type: Documentation
+  url: https://docs.provus.ai
+- type: Blog
+  url: https://provus.ai/blog/
+- type: Pricing
+  url: https://provus.ai/pricing/
+- type: SignUp
+  url: https://provus.ai/product-demo/
+- type: Support
+  url: https://provus.ai/contact-us/
+- type: TermsOfService
+  url: https://provus.ai/terms-of-service/
+- type: LLMsTxt
+  url: llms/provusinc-llms.txt
+- type: DomainSecurity
+  url: security/provusinc-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 2
+  pass: local-v1
