@@ -14,19 +14,25 @@ description: >-
   services revenue across customers including Thoughtworks, Trace3, and Prolifics.
   Provus does not currently publish a public developer API, OpenAPI specification,
   or developer portal; integration is delivered through native prebuilt
-  connectors, and product help documentation is hosted on a Document360 knowledge
-  base at docs.provus.ai.
+  connectors and a Salesforce AppExchange managed package, and product help
+  documentation is hosted on a Document360 knowledge base at docs.provus.ai that
+  302s the entire site to a login. Provus names an internal "Profet API" in its
+  published sub-processor list, but that service is not documented, versioned, or
+  reachable publicly.
 accessModel:
-  pricing: unknown
-  onboarding: unknown
-  trial: false
+  pricing: quote-only
+  onboarding: contact-sales
+  trial: true
+  trial_length: 30 days
   try_now: false
   public: false
-  label: Unknown
-  confidence: low
-  source: []
-  generated: '2026-07-22'
-  method: derived
+  label: Contact Sales
+  confidence: high
+  source:
+  - https://provus.ai/pricing/
+  - https://provus.ai/cpq-express/
+  generated: '2026-08-13'
+  method: searched
 image: https://provus.ai/wp-content/uploads/2021/08/Provus-Blue-Logo.png
 url: https://raw.githubusercontent.com/api-evangelist/provusinc/refs/heads/main/apis.yml
 x-type: company
@@ -37,7 +43,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-13'
 tags:
 - Company
 - CPQ
@@ -73,8 +79,33 @@ common:
   url: llms/provusinc-llms.txt
 - type: DomainSecurity
   url: security/provusinc-domain-security.yml
+- type: Plans
+  url: plans/provusinc-plans-pricing.yml
+- type: Lifecycle
+  url: lifecycle/provusinc-lifecycle.yml
 x-enrichment:
-  date: '2026-07-20'
-  status: enriched
-  artifacts_added: 2
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 4
   pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Provus publishes no developer portal or spec at all — the entire product
+    reference is a Document360 knowledge base at docs.provus.ai that 302s every
+    path to https://docs.provus.ai/login, and the product itself ships as a
+    Salesforce AppExchange managed package whose integration surface is
+    Salesforce's, not Provus'.
+  evidence:
+  - url: https://docs.provus.ai/
+    status: 302
+  - url: https://provus.ai/.well-known/agent-card.json
+    status: 404
+  - url: https://provus.ai/openapi.json
+    status: 404
+  - url: https://developer.provus.ai/
+    status: 404
+  - url: https://api.github.com/orgs/provusinc
+    status: 200
+  checked: '2026-08-13'
