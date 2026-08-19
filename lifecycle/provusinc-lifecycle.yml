@@ -1,0 +1,49 @@
+generated: '2026-08-13'
+method: searched
+source: https://provus.ai/legal/provus-product-policies-performance-guidelines/
+versioning:
+  scheme: vendor-managed-release
+  current: null
+  docs: https://provus.ai/legal/provus-product-policies-performance-guidelines/
+  note: >-
+    Provus does not publish an API version, because it publishes no public API.
+    Product versioning is vendor-managed: Provus states that customer
+    environments are push-upgraded with the latest product releases, and that
+    production patches are supported only on the latest product releases. The
+    patch and feature release schedule is stated to be influenced by the
+    Salesforce platform release cycle, since the product is a Salesforce-native
+    managed package.
+upgrade_policy:
+  model: push-upgrade
+  patch_support: latest product release only
+  cadence_dependency: Salesforce platform release cycle
+  source: https://provus.ai/legal/provus-product-policies-performance-guidelines/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No deprecation or sunset policy is published. No `Deprecation` pointer is
+    wired into apis.yml.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    The Product Policies and Performance Guidelines page states performance
+    guidelines (a 20-second target for most synchronous transactions) but no
+    uptime commitment, no credit regime, and no support response times. Any SLA
+    would sit inside the Provus Master Subscription Agreement, which is listed on
+    https://provus.ai/legal/ but is not published as a public URL.
+status_page: null
+status_page_note: >-
+  No status page found. status.provus.ai and every other provus.ai subdomain
+  resolve to a Hetzner wildcard that returns 404; provus.statuspage.io and
+  provusinc.statuspage.io return HTTP 200 but serve Atlassian's Statuspage
+  marketing page — a control probe against an invented subdomain returned the
+  same 200, so both are false positives. No `StatusPage` pointer is wired.
+changelog: null
+changelog_note: >-
+  No dated changelog or release-notes page. /changelog/ and /release-notes/ both
+  404; /whats-new/ 301s to a marketing blog post. Product release notes are
+  inside the Document360 knowledge base at docs.provus.ai, which requires a
+  login.
+deprecated_operations: []

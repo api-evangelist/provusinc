@@ -1,15 +1,14 @@
-generated: '2026-07-20'
+generated: '2026-08-13'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
-- host: provusinc.com
+- host: provus.ai
   https: true
   tls_version: TLSv1.3
-  cert_expires: Oct  3 04:28:45 2026 GMT
-  hsts: true
-  hsts_max_age: 2592000
+  cert_expires: Oct 17 21:44:07 2026 GMT
+  hsts: false
 domains:
-- domain: provusinc.com
+- domain: provus.ai
   dnssec: false
   caa: []
   spf: true

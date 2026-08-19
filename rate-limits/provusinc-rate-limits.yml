@@ -1,0 +1,47 @@
+generated: '2026-08-13'
+method: searched
+source: https://provus.ai/legal/provus-product-policies-performance-guidelines/
+docs: https://provus.ai/legal/provus-product-policies-performance-guidelines/
+limit_count: 0
+rate_limits: []
+response_headers: []
+exhaustion_status: null
+note: >-
+  Provus publishes NO API rate limits, because Provus publishes no public API.
+  limit_count is an honest zero and no `RateLimits` pointer is wired into
+  apis.yml — asserting one would credit Provus with a runtime rate-limit signal
+  it does not serve. What Provus DOES publish, on its Product Policies and
+  Performance Guidelines page, is a set of platform capacity and response-time
+  guidelines for the Salesforce-native application, recorded below as
+  platform_limits. These are product scale ceilings, not HTTP throttles: they
+  are not returned on any response, carry no headers, and no status code is
+  associated with exceeding them.
+platform_limits:
+- scope: services quote
+  metric: resource line items
+  limit: 1500
+- scope: services quote
+  metric: time periods
+  limit: 500
+- scope: services quote
+  metric: resource item and time period combinations
+  limit: 75000
+- scope: services quote
+  metric: services
+  limit: 70
+- scope: estimate template
+  metric: services
+  limit: 70
+- scope: estimate template
+  metric: tasks per service
+  limit: 500
+- scope: application
+  metric: synchronous transaction response time target
+  limit: 20 seconds
+inherited_limits:
+- source: Salesforce Platform
+  note: >-
+    Provus states the application is subject to the Salesforce Execution
+    Governors and Limits imposed on the Salesforce platform, and points at
+    Salesforce's own documentation for them. Those limits belong to Salesforce,
+    not to Provus, and are recorded here as inherited rather than published.

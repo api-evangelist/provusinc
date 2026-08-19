@@ -1,0 +1,53 @@
+generated: '2026-08-13'
+method: searched
+source: https://provus.ai/pricing/
+docs: https://provus.ai/pricing/
+currency: null
+plan_count: 2
+note: >-
+  Provus publishes two named product tiers but no prices. Both are quote-only —
+  the pricing page carries "Contact Sales" / "Book a demo" calls to action rather
+  than a rate. CPQ Express advertises a 30-day free trial (stated on
+  https://provus.ai/cpq-express/). No seat counts, quotas, overage rates or
+  metered units are published for either tier. Provus AI Agents are stated as
+  included in both tiers at no separately published price. There is no API plan,
+  because Provus publishes no public API.
+plans:
+- name: Provus CPQ Express
+  price: null
+  price_model: quote-only
+  billing_period: null
+  url: https://provus.ai/cpq-express/
+  trial:
+    available: true
+    length: 30 days
+    source: https://provus.ai/cpq-express/
+  included:
+  - AI Prompt-to-Quote Engine
+  - Service Catalog & Add-Ons
+  - Resource Roles & Rate Cards
+  - PDF Export & Versioning
+  - CRM-Ready Integration
+  - Self-Service Admin Controls
+  - Provus AI Agents
+  quotas: null
+  overage: null
+  limits: platform performance guidelines apply — see rate-limits/provusinc-rate-limits.yml
+- name: Provus Enterprise
+  price: null
+  price_model: quote-only
+  billing_period: null
+  url: https://provus.ai/services-cpq/
+  trial:
+    available: false
+  included:
+  - Guided Quoting
+  - Advanced Pricing
+  - Quantitative Scenario Modeling
+  - Collaboration & Approvals
+  - Document Generation
+  - Dashboard & Reporting
+  - Provus AI Agents
+  quotas: null
+  overage: null
+  limits: platform performance guidelines apply — see rate-limits/provusinc-rate-limits.yml
